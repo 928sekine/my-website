@@ -1,0 +1,392 @@
+/* ------------------------------ */
+/* カスタムプロパティ */
+/* ------------------------------ */
+/* カラー */
+:root {
+  --color-bg-primary: #f7f7f7;
+  --color-bg-yellow: #f5c343;
+  --color-bg-blue: #4173b2;
+  --color-bg-red: #eb5b5b;
+  --color-bg-white: #ffffff;
+  --color-font-black: #333;
+  --color-font-white: #fff;
+}
+
+/* コンテナ幅 */
+:root {
+  --width-content: 1080px;
+}
+
+/* フォント */
+:root {
+  --font-family-base: "Noto Sans JP", sans-serif;
+}
+
+// 基本のline-height
+:root {
+  --line-height-base: 1.8;
+}
+
+// 画面幅
+:root {
+  --width-content-max: 1366px;
+  --width-content: 1080px;
+  --width-content-small: 920px;
+}
+
+// ミックスインここから
+@mixin lineHeightSpaceFill($line-height) {
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+  }
+  &::before {
+    margin-top: calc((1 - #{$line-height}) * 0.5em);
+  }
+  &::after {
+    margin-bottom: calc((1 - #{$line-height}) * 0.5em);
+  }
+}
+// ミックスインここまで
+
+/* -------------------------
+全体共通のスタイル
+------------------------- */
+
+body {
+  font-family: var(--font-family-base);
+  font-size: 16px;
+  line-height: var(--line-height-base);
+  letter-spacing: 0.08em;
+}
+
+/* -------------------------
+コンテナの幅、余白
+------------------------- */
+.l-container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: var(--width-content);
+}
+.l-container-max {
+  width: 100%;
+  margin: 0 auto;
+  max-width: var(--width-content-max);
+}
+
+.l-container-small {
+  width: 90%;
+  margin: 0 auto;
+  max-width: var(--width-content-small);
+}
+// --------------------------
+// ボタン
+// --------------------------
+
+// 青
+.c-button1 {
+  max-width: 260px;
+  margin: 0 auto;
+  height: 55px;
+  background-color: var(--color-bg-blue);
+  box-shadow: 0 5px 0 #2d507c;
+  color: var(--color-font-white);
+  font-family: var(--font-family-base);
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  @include lineHeightSpaceFill(1);
+  font-weight: 600;
+  text-align: center;
+  display: inline-flex;
+  letter-spacing: 0.1;
+  padding: 19.5px auto;
+  display: flex;
+  place-items: center;
+  border-radius: 100px;
+}
+
+// 白
+.c-button2 {
+  max-width: 260px;
+  margin: 0 auto;
+  height: 55px;
+  border-radius: 100px;
+  font-weight: 600;
+  background-color: var(--color-bg-white);
+  color: var(--color-bg-navy);
+  border: solid 1px var(--color-bg-pink);
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  @include lineHeightSpaceFill(1);
+  text-align: center;
+  display: inline-flex;
+  letter-spacing: 0.1;
+  padding: 19.5px auto;
+  display: grid;
+  place-items: center;
+  text-transform: uppercase;
+}
+.c-button--size-large {
+  width: 100%;
+  height: 55px;
+  display: grid;
+  place-items: center;
+}
+
+.c-button--ja {
+  width: 100%;
+  width: 324px;
+  height: 55px;
+  background-color: var(--color-bg-primary);
+  color: var(--color-font-white);
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  @include lineHeightSpaceFill(1);
+  text-align: center;
+  display: inline-flex;
+  letter-spacing: 0.1;
+  padding: 19.5px auto;
+  text-transform: uppercase;
+  font-family: var(--font-family-base);
+}
+
+@media screen and (min-width: 768px) {
+  //  大きめボタン
+  .c-button--big {
+    width: 360px;
+    padding: 18.5px 126px;
+  }
+}
+
+// 中央寄せボタン
+.c-button--center {
+  text-align: center;
+}
+
+// --------------------------
+// テキスト
+// --------------------------
+.base-text {
+  font-family: var(--font-family-base);
+  @include lineHeightSpaceFill(1.5);
+  line-height: 1.5;
+  font-size: 16px;
+  letter-spacing: 0.08em;
+  font-weight: 400;
+  text-align: left;
+}
+
+.base-text--small {
+  font-size: 14px;
+}
+
+// --------------------------
+// 見出し
+// --------------------------
+
+.c-title-level2 {
+  color: var(--color-font-black);
+  font-family: var(--font-family-base);
+  @include lineHeightSpaceFill(1.5);
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.c-title-level3 {
+  color: var(--color-font-black);
+  font-family: var(--font-family-base);
+  @include lineHeightSpaceFill(1.5);
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  font-size: 18px;
+  font-weight: 600;
+  span {
+    display: block;
+  }
+}
+
+// 中央寄せ
+.c-title--center {
+  text-align: center;
+}
+
+// --------------------------
+//カード - コンポーネント
+// --------------------------
+.c-card-item {
+  padding: 30px 15px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .c-card-item {
+    grid-row: 1/2;
+  }
+}
+
+.c-card-item:last-child {
+  margin-bottom: 0;
+}
+
+// --------------------------
+//ヘッダー
+// --------------------------
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+}
+.header-inner {
+  background-color: var(--color-bg-yellow);
+  height: 60px;
+}
+// --------------------------
+//メインビジュアル
+// --------------------------
+.top-mv-inner {
+  margin-top: 60px;
+  height: 360px;
+}
+
+// --------------------------
+//自己紹介
+// --------------------------
+.top-about {
+  padding: 60px 0;
+  background-color: var(--color-bg-primary);
+}
+.top-about-inner {
+  text-align: center;
+}
+
+.top-about-balloon {
+  background-color: var(--color-bg-white);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.top-about-img {
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+.top-about-name {
+  font-family: var(--font-family-base);
+  @include lineHeightSpaceFill(1.5);
+  line-height: 1.5;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+.top-about-text {
+  margin-top: 30px;
+}
+
+.top-about-list {
+  text-align: left;
+  margin: 30px 0;
+}
+.top-about-item {
+  list-style: disc;
+  list-style-position: inside;
+}
+
+.top-about-button {
+  margin-bottom: 15px;
+}
+// --------------------------
+//できること
+// --------------------------
+.top-power {
+  padding: 60px 0;
+}
+.top-power-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 40px;
+}
+.top-power-wrap:last-child {
+  margin-bottom: 0;
+}
+.top-power-circle {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  width: 100px;
+  height: 100px;
+  background-color: var(--color-bg-red);
+  border-radius: 50%;
+  border: solid 2px var(--color-bg-white);
+  text-align: center;
+}
+.top-power-title {
+  margin-bottom: 30px;
+}
+.top-power-img {
+  margin-bottom: 15px;
+}
+.top-power-item-title {
+  margin-bottom: 30px;
+}
+.top-power-text {
+  padding: 0 18px;
+}
+.top-power-circle-text {
+  font-family: var(--font-family-base);
+  @include lineHeightSpaceFill(1);
+  line-height: 1;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  color: var(--color-font-white);
+}
+// --------------------------
+//制作事例
+// --------------------------
+.top-works {
+  padding: 60px 0;
+  background-color: var(--color-bg-primary);
+}
+.top-works-title {
+  margin-bottom: 30px;
+}
+// swiper
+.swiper-slide {
+  background-color: var(--color-bg-white);
+  border-radius: 30px;
+  padding: 15px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin: 0;
+}
+
+.top-works-img {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.top-works-slide-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--color-bg-blue);
+  width: 40px;
+  height: 40px;
+}
