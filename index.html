@@ -9,11 +9,11 @@
       content="Webライティング・コーディングができる関根のポポートフォリオです。"
     />
     <meta name="format-detection" content="telephone=no" />
-    <!-- マテリアルアイコン -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/aa71a318bc.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- ファビコン・ウェブクリップアイコン -->
     <link rel="shortcut icon" href="/img/favicon.ico" />
     <link rel="apple-touch-icon" href="/img/webclip.png" />
@@ -49,10 +49,6 @@
     <!-- css -->
     <script src="js/main.js" defer></script>
     <!-- reset.css destyle -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"
-    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -61,6 +57,9 @@
     <header class="header">
       <div class="header-inner">
         <h1>logo</h1>
+        <div class="header-contact">
+          <i class="fa-regular fa-envelope fa-lg"></i>
+        </div>
       </div>
     </header>
     <!-- ヘッダー -->
@@ -76,8 +75,7 @@
           <!-- ふきだし -->
           <div class="top-about-balloon">
             <p class="base-text">
-              2023年12月、空きリソースあります！ご相談ください。
-              <br />（年末年始は12/31〜1/3までお仕事をお休みとさせていただきます。メールの返信は対応しております。）
+              2023年2月、空きリソースあります！ご相談ください。
             </p>
           </div>
           <img
@@ -98,10 +96,7 @@
           <ul class="top-about-list">
             <li class="top-about-item">Webライティング</li>
             <li class="top-about-item">コーディング</li>
-            <li class="top-about-item">
-              キャラクターイラスト制作、ロゴデザイン
-            </li>
-            <li class="top-about-item">Webライティング</li>
+            <li class="top-about-item">キャラクターイラスト制作</li>
           </ul>
           <a
             href="#"
@@ -117,7 +112,7 @@
     <!-- 自己紹介 -->
     <!-- できること -->
     <div class="top-power">
-      <div class="l-container-max">
+      <div class="l-container">
         <div class="top-power-inner">
           <h2 class="c-title-level2 c-title--center top-power-title">
             できること
@@ -193,11 +188,11 @@
           </h2>
           <div class="top-works-list">
             <!-- Sliderを包むコンテナ要素 -->
-            <div class="top-works-swiper">
+            <div class="swiper top-works-swiper">
               <!-- スライド要素を包む要素 -->
-              <div class="swiper-wrapper">
+              <div class="swiper-wrapper top-works-swiper-wrapper">
                 <!-- 各スライド -->
-                <div class="swiper-slide">
+                <div class="swiper-slide top-works-swiper-slide">
                   <div class="top-works-img">
                     <img
                       src="https://placehold.jp/582x338.png"
@@ -206,14 +201,16 @@
                       height="169"
                       decoding="async"
                     />
-                    <div class="top-works-slide-icon"></div>
+                    <div class="top-works-slide-icon">
+                      <i class="fa-regular fa-envelope fa-lg"></i>
+                    </div>
                   </div>
                   <h3 class="c-title-level3 top-works-slide-title">
                     事例タイトル1
                   </h3>
                   <p class="base-text--small">デザイン・コーディング</p>
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide top-works-swiper-slide">
                   <div class="top-works-img">
                     <img
                       src="https://placehold.jp/582x338.png"
@@ -229,55 +226,7 @@
                   </h3>
                   <p class="base-text--small">デザイン・コーディング</p>
                 </div>
-                <div class="swiper-slide">
-                  <div class="top-works-img">
-                    <img
-                      src="https://placehold.jp/582x338.png"
-                      alt=""
-                      width="291"
-                      height="169"
-                      decoding="async"
-                    />
-                    <div class="top-works-slide-icon"></div>
-                  </div>
-                  <h3 class="c-title-level3 top-works-slide-title">
-                    事例タイトル3
-                  </h3>
-                  <p class="base-text--small">デザイン・コーディング</p>
-                </div>
-                <div class="swiper-slide">
-                  <div class="top-works-img">
-                    <img
-                      src="https://placehold.jp/582x338.png"
-                      alt=""
-                      width="291"
-                      height="169"
-                      decoding="async"
-                    />
-                    <div class="top-works-slide-icon"></div>
-                  </div>
-                  <h3 class="c-title-level3 top-works-slide-title">
-                    事例タイトル1
-                  </h3>
-                  <p class="base-text--small">デザイン・コーディング</p>
-                </div>
-                <div class="swiper-slide">
-                  <div class="top-works-img">
-                    <img
-                      src="https://placehold.jp/582x338.png"
-                      alt=""
-                      width="291"
-                      height="169"
-                      decoding="async"
-                    />
-                    <div class="top-works-slide-icon"></div>
-                  </div>
-                  <h3 class="c-title-level3 top-works-slide-title">
-                    事例タイトル2
-                  </h3>
-                  <p class="base-text--small">デザイン・コーディング</p>
-                </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide top-works-swiper-slide">
                   <div class="top-works-img">
                     <img
                       src="https://placehold.jp/582x338.png"
@@ -295,12 +244,67 @@
                 </div>
               </div>
             </div>
+            <div class="top-works-slide-pagination swiper-pagination"></div>
+            <div class="top-works-slide-prev swiper-button-prev"></div>
+            <div class="top-works-slide-next swiper-button-next"></div>
           </div>
+          <a href="#" class="c-button1">一覧を見る</a>
         </div>
       </div>
     </div>
     <!-- 制作事例 -->
+    <!-- お知らせ -->
+    <div class="top-news">
+      <div class="l-container">
+        <div class="top-news-inner">
+          <h2 class="c-title-level2 c-title--center top-power-title">
+            お知らせ
+          </h2>
+          <ul class="top-news-list">
+            <li class="top-news-item">
+              <p class="top-news-date base-text base-text--small">2023/1/1</p>
+              <p class="top-news-title base-text base-text--bold">
+                ニュースのタイトル
+              </p>
+            </li>
+            <li class="top-news-item">
+              <p class="top-news-date base-text base-text--small">2023/1/1</p>
+              <p class="top-news-title base-text base-text--bold">
+                ニュースのタイトル
+              </p>
+            </li>
+            <li class="top-news-item">
+              <p class="top-news-date base-text base-text--small">2023/1/1</p>
+              <p class="top-news-title base-text base-text--bold">
+                ニュースのタイトル
+              </p>
+            </li>
+          </ul>
+          <a href="#" class="c-button1">一覧を見る</a>
+        </div>
+      </div>
+    </div>
+    <!-- お知らせ -->
     <!-- フッター -->
+    <footer class="footer">
+      <div class="l-container">
+        <div class="footer-inner">
+          <p class="footer-site-name">Sekine WebSite</p>
+          <p class="foter-text base-text base-text--small">
+            お世話になっているサイトです。<br />
+            いつもありがとうございます。
+          </p>
+          <ul class="footer-link-list">
+            <li class="footer-link-item"><a href="#">link site</a></li>
+            <li class="footer-link-item"><a href="#">link site</a></li>
+            <li class="footer-link-item"><a href="#">link site</a></li>
+          </ul>
+          <a href="#" class="c-button1 c-button-decoration icon-contact"
+            >お問い合わせ</a
+          >
+        </div>
+      </div>
+    </footer>
     <!-- フッター -->
   </body>
 </html>

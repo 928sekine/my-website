@@ -1,12 +1,13 @@
 // swiper
-const swiper = new Swiper(".top-works-swiper", {
+const swiper = new Swiper(".swiper", {
   loop: true,
-  slidesPerView: "auto",
-  speed: 1000,
-  autoplay: {
-    delay: 2000,
-  },
-});
+pagination: {                       //ページネーション（ドット）
+            el: '.swiper-pagination',
+        },
+        navigation: {                       //ナビゲーション（矢印）
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        }});
 
 
 
